@@ -30,6 +30,10 @@ namespace DotSpatial21
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+
+
+
             // 创建一个FeatureSet对象，指定FeatureType为Line
             IFeatureSet fs = new FeatureSet(FeatureType.Line);
             fs.Projection = ProjectionInfo.FromEpsgCode(4326); // 设置地理坐标系为WGS84
@@ -557,7 +561,20 @@ namespace DotSpatial21
             //        }
             //    }
             }
+
+        private void map_MouseMove(object sender, MouseEventArgs e)
+        {
+            // 获取鼠标在地图上的坐标
+            double x = map.PixelToProj(e.Location).X;
+            double y = map.PixelToProj(e.Location).Y;
+
+            // 将坐标信息格式化为字符串
+            string coordinateInfo = string.Format("X: {0}, Y: {1}", x, y);
+
+            // 将坐标信息设置到 spatialStatusStrip 中的 ToolStripStatusLabel 控件中
+            toolStripStatusLabelCoordinate.Text = coordinateInfo;
         }
+    }
 }
 
 

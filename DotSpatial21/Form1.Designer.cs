@@ -49,7 +49,10 @@
             this.spatialDockManager1 = new DotSpatial.Controls.SpatialDockManager();
             this.加载ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabelCoordinate = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelScale = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.spatialStatusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spatialDockManager1)).BeginInit();
             this.spatialDockManager1.Panel1.SuspendLayout();
             this.spatialDockManager1.Panel2.SuspendLayout();
@@ -203,6 +206,7 @@
             this.map.Size = new System.Drawing.Size(400, 376);
             this.map.TabIndex = 0;
             this.map.ZoomOutFartherThanMaxExtent = false;
+            this.map.MouseMove += new System.Windows.Forms.MouseEventHandler(this.map_MouseMove);
             // 
             // legend
             // 
@@ -229,10 +233,13 @@
             // spatialStatusStrip1
             // 
             this.spatialStatusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.spatialStatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelCoordinate,
+            this.toolStripStatusLabelScale});
             this.spatialStatusStrip1.Location = new System.Drawing.Point(0, 428);
             this.spatialStatusStrip1.Name = "spatialStatusStrip1";
             this.spatialStatusStrip1.ProgressBar = null;
-            this.spatialStatusStrip1.ProgressLabel = null;
+            this.spatialStatusStrip1.ProgressLabel = this.toolStripStatusLabelCoordinate;
             this.spatialStatusStrip1.Size = new System.Drawing.Size(603, 22);
             this.spatialStatusStrip1.TabIndex = 2;
             this.spatialStatusStrip1.Text = "spatialStatusStrip1";
@@ -271,6 +278,18 @@
             this.kMLToolStripMenuItem.Text = "KML";
             this.kMLToolStripMenuItem.Click += new System.EventHandler(this.kMLToolStripMenuItem_Click);
             // 
+            // toolStripStatusLabelCoordinate
+            // 
+            this.toolStripStatusLabelCoordinate.Name = "toolStripStatusLabelCoordinate";
+            this.toolStripStatusLabelCoordinate.Size = new System.Drawing.Size(68, 17);
+            this.toolStripStatusLabelCoordinate.Text = "坐标信息：";
+            // 
+            // toolStripStatusLabelScale
+            // 
+            this.toolStripStatusLabelScale.Name = "toolStripStatusLabelScale";
+            this.toolStripStatusLabelScale.Size = new System.Drawing.Size(66, 17);
+            this.toolStripStatusLabelScale.Text = "版权：XYT";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -285,6 +304,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.spatialStatusStrip1.ResumeLayout(false);
+            this.spatialStatusStrip1.PerformLayout();
             this.spatialDockManager1.Panel1.ResumeLayout(false);
             this.spatialDockManager1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spatialDockManager1)).EndInit();
@@ -317,6 +338,8 @@
         private System.Windows.Forms.ToolStripMenuItem 文本转点ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 加载ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCoordinate;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelScale;
     }
 }
 
