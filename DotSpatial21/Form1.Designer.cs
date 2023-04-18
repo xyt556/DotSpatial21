@@ -52,6 +52,9 @@
             this.toolStripStatusLabelScale = new System.Windows.Forms.ToolStripStatusLabel();
             this.spatialDockManager1 = new DotSpatial.Controls.SpatialDockManager();
             this.spatialStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelLayerName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelLayerType = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelLayerVisible = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.spatialStatusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spatialDockManager1)).BeginInit();
@@ -252,7 +255,10 @@
             this.spatialStatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCoordinate,
             this.spatialStatusStrip,
-            this.toolStripStatusLabelScale});
+            this.toolStripStatusLabelScale,
+            this.toolStripStatusLabelLayerName,
+            this.toolStripStatusLabelLayerType,
+            this.toolStripStatusLabelLayerVisible});
             this.spatialStatusStrip1.Location = new System.Drawing.Point(0, 428);
             this.spatialStatusStrip1.Name = "spatialStatusStrip1";
             this.spatialStatusStrip1.ProgressBar = null;
@@ -297,6 +303,24 @@
             this.spatialStatusStrip.Name = "spatialStatusStrip";
             this.spatialStatusStrip.Size = new System.Drawing.Size(44, 17);
             this.spatialStatusStrip.Text = "比例尺";
+            // 
+            // toolStripStatusLabelLayerName
+            // 
+            this.toolStripStatusLabelLayerName.Name = "toolStripStatusLabelLayerName";
+            this.toolStripStatusLabelLayerName.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabelLayerName.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabelLayerType
+            // 
+            this.toolStripStatusLabelLayerType.Name = "toolStripStatusLabelLayerType";
+            this.toolStripStatusLabelLayerType.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabelLayerType.Text = "toolStripStatusLabel1";
+            // 
+            // toolStripStatusLabelLayerVisible
+            // 
+            this.toolStripStatusLabelLayerVisible.Name = "toolStripStatusLabelLayerVisible";
+            this.toolStripStatusLabelLayerVisible.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabelLayerVisible.Text = "toolStripStatusLabel1";
             // 
             // Form1
             // 
@@ -349,6 +373,9 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCoordinate;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelScale;
         private System.Windows.Forms.ToolStripStatusLabel spatialStatusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerName;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerType;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerVisible;
     }
 }
 

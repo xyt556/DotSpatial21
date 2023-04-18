@@ -30,9 +30,35 @@ namespace DotSpatial21
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
 
-            
+            // 获取当前活动图层对象，查看信息
+            IMapLayer currentLayer = map.Layers.SelectedLayer;
+
+            // 检查当前图层对象是否为空
+            if (currentLayer != null)
+            {
+                // 获取当前图层信息
+                string layerName = currentLayer.LegendText;
+                string layerType = currentLayer.GetType().Name;
+                bool layerVisible = currentLayer.IsVisible;
+
+                // 在状态栏中显示当前图层信息
+                spatialStatusStrip1.Items["toolStripStatusLabelLayerName"].Text = "当前图层: " + layerName;
+                spatialStatusStrip1.Items["toolStripStatusLabelLayerType"].Text = "类型: " + layerType;
+                spatialStatusStrip1.Items["toolStripStatusLabelLayerVisible"].Text = "可见性: " + (layerVisible ? "是" : "否");
+            }
+            else
+            {
+                // 若当前图层对象为空，清空状态栏中的图层信息
+                spatialStatusStrip1.Items["toolStripStatusLabelLayerName"].Text = "";
+                spatialStatusStrip1.Items["toolStripStatusLabelLayerType"].Text = "";
+                spatialStatusStrip1.Items["toolStripStatusLabelLayerVisible"].Text = "";
+            }
+
+
+
+
+
 
             // 创建一个FeatureSet对象，指定FeatureType为Line
             IFeatureSet fs = new FeatureSet(FeatureType.Line);
