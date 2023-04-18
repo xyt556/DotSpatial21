@@ -49,7 +49,7 @@
             this.legend = new DotSpatial.Controls.Legend();
             this.spatialStatusStrip1 = new DotSpatial.Controls.SpatialStatusStrip();
             this.toolStripStatusLabelCoordinate = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelScale = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatuscopyright = new System.Windows.Forms.ToolStripStatusLabel();
             this.spatialDockManager1 = new DotSpatial.Controls.SpatialDockManager();
             this.spatialStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelLayerName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -248,6 +248,7 @@
             this.legend.Text = "legend1";
             this.legend.UseLegendForSelection = true;
             this.legend.VerticalScrollEnabled = true;
+            this.legend.Click += new System.EventHandler(this.legend_Click);
             // 
             // spatialStatusStrip1
             // 
@@ -255,10 +256,10 @@
             this.spatialStatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCoordinate,
             this.spatialStatusStrip,
-            this.toolStripStatusLabelScale,
             this.toolStripStatusLabelLayerName,
             this.toolStripStatusLabelLayerType,
-            this.toolStripStatusLabelLayerVisible});
+            this.toolStripStatusLabelLayerVisible,
+            this.toolStripStatuscopyright});
             this.spatialStatusStrip1.Location = new System.Drawing.Point(0, 428);
             this.spatialStatusStrip1.Name = "spatialStatusStrip1";
             this.spatialStatusStrip1.ProgressBar = null;
@@ -273,11 +274,11 @@
             this.toolStripStatusLabelCoordinate.Size = new System.Drawing.Size(68, 17);
             this.toolStripStatusLabelCoordinate.Text = "坐标信息：";
             // 
-            // toolStripStatusLabelScale
+            // toolStripStatuscopyright
             // 
-            this.toolStripStatusLabelScale.Name = "toolStripStatusLabelScale";
-            this.toolStripStatusLabelScale.Size = new System.Drawing.Size(66, 17);
-            this.toolStripStatusLabelScale.Text = "版权：XYT";
+            this.toolStripStatuscopyright.Name = "toolStripStatuscopyright";
+            this.toolStripStatuscopyright.Size = new System.Drawing.Size(66, 17);
+            this.toolStripStatuscopyright.Text = "版权：XYT";
             // 
             // spatialDockManager1
             // 
@@ -307,20 +308,20 @@
             // toolStripStatusLabelLayerName
             // 
             this.toolStripStatusLabelLayerName.Name = "toolStripStatusLabelLayerName";
-            this.toolStripStatusLabelLayerName.Size = new System.Drawing.Size(131, 17);
-            this.toolStripStatusLabelLayerName.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabelLayerName.Size = new System.Drawing.Size(56, 17);
+            this.toolStripStatusLabelLayerName.Text = "当前图层";
             // 
             // toolStripStatusLabelLayerType
             // 
             this.toolStripStatusLabelLayerType.Name = "toolStripStatusLabelLayerType";
-            this.toolStripStatusLabelLayerType.Size = new System.Drawing.Size(131, 17);
-            this.toolStripStatusLabelLayerType.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabelLayerType.Size = new System.Drawing.Size(32, 17);
+            this.toolStripStatusLabelLayerType.Text = "类型";
             // 
             // toolStripStatusLabelLayerVisible
             // 
             this.toolStripStatusLabelLayerVisible.Name = "toolStripStatusLabelLayerVisible";
-            this.toolStripStatusLabelLayerVisible.Size = new System.Drawing.Size(131, 17);
-            this.toolStripStatusLabelLayerVisible.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabelLayerVisible.Size = new System.Drawing.Size(56, 17);
+            this.toolStripStatusLabelLayerVisible.Text = "图层开关";
             // 
             // Form1
             // 
@@ -371,7 +372,7 @@
         private System.Windows.Forms.ToolStripMenuItem 加载ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCoordinate;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelScale;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatuscopyright;
         private System.Windows.Forms.ToolStripStatusLabel spatialStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerName;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerType;
