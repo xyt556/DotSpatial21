@@ -16,6 +16,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using Point = NetTopologySuite.Geometries.Point;
 
 namespace DotSpatial21
@@ -461,7 +462,7 @@ namespace DotSpatial21
 
         private void 文本转点ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
 
 
             // 使用 OpenFileDialog 打开文本文件
@@ -505,7 +506,7 @@ namespace DotSpatial21
                             // 添加一个点要素
                             IFeature feature = pointFeatureSet.AddFeature(point);
                             // 设置点要素的属性值
-                            feature.DataRow["ID"] = index ++;
+                            feature.DataRow["ID"] = index++;
                             feature.DataRow["X"] = point.X;
                             feature.DataRow["Y"] = point.Y;
                             feature.DataRow["名称"] = parts[2];
@@ -516,7 +517,7 @@ namespace DotSpatial21
                 }
                 // 创建点要素图层
                 MapPointLayer pointLayer = new MapPointLayer(pointFeatureSet);
-                
+
                 map.Layers.Add(pointLayer);
                 pointLayer.LegendText = "点";
                 // 将点要素集添加到点要素图层，并刷新地图
@@ -524,5 +525,42 @@ namespace DotSpatial21
                 map.ResetBuffer();
             }
         }
-    }
+
+        private void kMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //// OpenFileDialog 用于选择 KML 文件
+            //OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.Filter = "KML 文件 (*.kml)|*.kml";
+            //openFileDialog.Title = "选择 KML 文件";
+            //if (openFileDialog.ShowDialog() == DialogResult.OK)
+            //{
+                
+            //    if (openFileDialog.ShowDialog() == DialogResult.OK)
+            //    {
+            //        string fileName = openFileDialog.FileName;
+
+            //        try
+            //        {
+            //            // 使用 FeatureSet 类加载 KML 文件
+            //            FeatureSet featureSet = FeatureSet.Open(fileName);
+            //            // 将 FeatureSet 添加到地图控件中
+            //            // 这里假设你的地图控件名为 mapControl
+            //            map.Layers.Add(featureSet);
+
+            //            // 刷新地图
+            //            map.Refresh();
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            // 处理异常
+            //            MessageBox.Show("加载 KML 文件时发生错误：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    }
+            }
+        }
 }
+
+
+
+
+

@@ -35,8 +35,10 @@
             this.点ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.线ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.面ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.文本转点ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.创建经纬网ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.经纬网1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.经纬网2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.空间分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.叠置分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.缓冲区分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,8 +47,8 @@
             this.legend = new DotSpatial.Controls.Legend();
             this.spatialStatusStrip1 = new DotSpatial.Controls.SpatialStatusStrip();
             this.spatialDockManager1 = new DotSpatial.Controls.SpatialDockManager();
-            this.经纬网2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.文本转点ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.加载ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spatialDockManager1)).BeginInit();
             this.spatialDockManager1.Panel1.SuspendLayout();
@@ -60,7 +62,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem,
             this.要素ToolStripMenuItem,
-            this.空间分析ToolStripMenuItem});
+            this.空间分析ToolStripMenuItem,
+            this.加载ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -99,23 +102,30 @@
             // 点ToolStripMenuItem
             // 
             this.点ToolStripMenuItem.Name = "点ToolStripMenuItem";
-            this.点ToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
+            this.点ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.点ToolStripMenuItem.Text = "点";
             this.点ToolStripMenuItem.Click += new System.EventHandler(this.点ToolStripMenuItem_Click);
             // 
             // 线ToolStripMenuItem
             // 
             this.线ToolStripMenuItem.Name = "线ToolStripMenuItem";
-            this.线ToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
+            this.线ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.线ToolStripMenuItem.Text = "线";
             this.线ToolStripMenuItem.Click += new System.EventHandler(this.线ToolStripMenuItem_Click);
             // 
             // 面ToolStripMenuItem
             // 
             this.面ToolStripMenuItem.Name = "面ToolStripMenuItem";
-            this.面ToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
+            this.面ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.面ToolStripMenuItem.Text = "面";
             this.面ToolStripMenuItem.Click += new System.EventHandler(this.面ToolStripMenuItem_Click);
+            // 
+            // 文本转点ToolStripMenuItem
+            // 
+            this.文本转点ToolStripMenuItem.Name = "文本转点ToolStripMenuItem";
+            this.文本转点ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.文本转点ToolStripMenuItem.Text = "文本转点";
+            this.文本转点ToolStripMenuItem.Click += new System.EventHandler(this.文本转点ToolStripMenuItem_Click);
             // 
             // 创建经纬网ToolStripMenuItem
             // 
@@ -130,6 +140,13 @@
             this.经纬网1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.经纬网1ToolStripMenuItem.Text = "经纬网1";
             this.经纬网1ToolStripMenuItem.Click += new System.EventHandler(this.经纬网1ToolStripMenuItem_Click);
+            // 
+            // 经纬网2ToolStripMenuItem
+            // 
+            this.经纬网2ToolStripMenuItem.Name = "经纬网2ToolStripMenuItem";
+            this.经纬网2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.经纬网2ToolStripMenuItem.Text = "经纬网2";
+            this.经纬网2ToolStripMenuItem.Click += new System.EventHandler(this.经纬网2ToolStripMenuItem_Click);
             // 
             // 空间分析ToolStripMenuItem
             // 
@@ -239,19 +256,20 @@
             this.spatialDockManager1.TabControl2 = null;
             this.spatialDockManager1.TabIndex = 3;
             // 
-            // 经纬网2ToolStripMenuItem
+            // 加载ToolStripMenuItem
             // 
-            this.经纬网2ToolStripMenuItem.Name = "经纬网2ToolStripMenuItem";
-            this.经纬网2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.经纬网2ToolStripMenuItem.Text = "经纬网2";
-            this.经纬网2ToolStripMenuItem.Click += new System.EventHandler(this.经纬网2ToolStripMenuItem_Click);
+            this.加载ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kMLToolStripMenuItem});
+            this.加载ToolStripMenuItem.Name = "加载ToolStripMenuItem";
+            this.加载ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.加载ToolStripMenuItem.Text = "加载";
             // 
-            // 文本转点ToolStripMenuItem
+            // kMLToolStripMenuItem
             // 
-            this.文本转点ToolStripMenuItem.Name = "文本转点ToolStripMenuItem";
-            this.文本转点ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.文本转点ToolStripMenuItem.Text = "文本转点";
-            this.文本转点ToolStripMenuItem.Click += new System.EventHandler(this.文本转点ToolStripMenuItem_Click);
+            this.kMLToolStripMenuItem.Name = "kMLToolStripMenuItem";
+            this.kMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kMLToolStripMenuItem.Text = "KML";
+            this.kMLToolStripMenuItem.Click += new System.EventHandler(this.kMLToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -297,6 +315,8 @@
         private System.Windows.Forms.ToolStripMenuItem 缓冲区分析ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 经纬网2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 文本转点ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 加载ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kMLToolStripMenuItem;
     }
 }
 
