@@ -577,10 +577,12 @@ namespace DotSpatial21
 
             // 将坐标信息设置到 spatialStatusStrip 中的 ToolStripStatusLabel 控件中
             toolStripStatusLabelCoordinate.Text = coordinateInfo;
-            
-            
+
+
             // 以下是想动态显示比例尺，目前还有问题
             // 获取地图的当前视图范围
+            
+
             Extent currentExtent = map.ViewExtents;
 
             // 获取地图的当前显示尺寸（地图控件的大小）
@@ -621,6 +623,12 @@ namespace DotSpatial21
                 spatialStatusStrip1.Items["toolStripStatusLabelLayerType"].Text = "";
                 spatialStatusStrip1.Items["toolStripStatusLabelLayerVisible"].Text = "";
             }
+        }
+
+        private void 单点投影ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmpointProject myForm = new FrmpointProject();
+            myForm.ShowDialog();
         }
     }
 }

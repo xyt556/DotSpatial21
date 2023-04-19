@@ -55,6 +55,8 @@
             this.toolStripStatusLabelLayerName = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelLayerType = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelLayerVisible = new System.Windows.Forms.ToolStripStatusLabel();
+            this.坐标变换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.单点投影ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.spatialStatusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spatialDockManager1)).BeginInit();
@@ -70,7 +72,8 @@
             this.文件ToolStripMenuItem,
             this.要素ToolStripMenuItem,
             this.空间分析ToolStripMenuItem,
-            this.加载ToolStripMenuItem});
+            this.加载ToolStripMenuItem,
+            this.坐标变换ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -323,6 +326,21 @@
             this.toolStripStatusLabelLayerVisible.Size = new System.Drawing.Size(56, 17);
             this.toolStripStatusLabelLayerVisible.Text = "图层开关";
             // 
+            // 坐标变换ToolStripMenuItem
+            // 
+            this.坐标变换ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.单点投影ToolStripMenuItem});
+            this.坐标变换ToolStripMenuItem.Name = "坐标变换ToolStripMenuItem";
+            this.坐标变换ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.坐标变换ToolStripMenuItem.Text = "坐标变换";
+            // 
+            // 单点投影ToolStripMenuItem
+            // 
+            this.单点投影ToolStripMenuItem.Name = "单点投影ToolStripMenuItem";
+            this.单点投影ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.单点投影ToolStripMenuItem.Text = "单点投影";
+            this.单点投影ToolStripMenuItem.Click += new System.EventHandler(this.单点投影ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -377,6 +395,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerName;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerType;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerVisible;
+        private System.Windows.Forms.ToolStripMenuItem 坐标变换ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 单点投影ToolStripMenuItem;
     }
 }
 
