@@ -641,7 +641,17 @@ namespace DotSpatial21
             {
                 // 打开图层
                 IFeatureSet featureSet = FeatureSet.Open(openFileDialog.FileName);
-
+                // 获取图层的投影信息
+                ProjectionInfo projection = featureSet.Projection;
+                if (projection != null)
+                {
+                    // 显示投影信息
+                    MessageBox.Show($"所选图层的原始坐标系统是：{projection}");
+                }
+                else
+                {
+                    MessageBox.Show("该图层没有投影信息。");
+                }
                 // 获取目标投影
                 ProjectionInfo destProjection = GetSelectedProjection();
                 if (destProjection != null)
@@ -664,7 +674,9 @@ namespace DotSpatial21
             // 显示对话框并获取用户选择的投影
             if (projectionSelectDialog.ShowDialog() == DialogResult.OK)
             {
+                MessageBox.Show($"您选择的投影是：{projectionSelectDialog.SelectedCoordinateSystem}");
                 return projectionSelectDialog.SelectedCoordinateSystem;
+                
             }
             else
             {
