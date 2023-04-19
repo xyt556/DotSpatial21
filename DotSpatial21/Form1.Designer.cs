@@ -58,6 +58,8 @@
             this.坐标变换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单点投影ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.图层投影ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.spatialStatusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spatialDockManager1)).BeginInit();
@@ -74,7 +76,8 @@
             this.要素ToolStripMenuItem,
             this.空间分析ToolStripMenuItem,
             this.加载ToolStripMenuItem,
-            this.坐标变换ToolStripMenuItem});
+            this.坐标变换ToolStripMenuItem,
+            this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -350,6 +353,21 @@
             this.图层投影ToolStripMenuItem.Text = "图层投影";
             this.图层投影ToolStripMenuItem.Click += new System.EventHandler(this.图层投影ToolStripMenuItem_Click);
             // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.关于ToolStripMenuItem});
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.帮助ToolStripMenuItem.Text = "帮助";
+            // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.关于ToolStripMenuItem.Text = "关于";
+            this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -360,7 +378,7 @@
             this.Controls.Add(this.spatialToolStrip);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "GIS平台";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -407,6 +425,8 @@
         private System.Windows.Forms.ToolStripMenuItem 坐标变换ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 单点投影ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 图层投影ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
     }
 }
 

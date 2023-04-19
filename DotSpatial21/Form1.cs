@@ -696,6 +696,12 @@ namespace DotSpatial21
                 featureSet.SaveAs(saveFileDialog.FileName, true);
             }
         }
+
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox myAboutbox = new AboutBox();
+            myAboutbox.ShowDialog();
+        }
     }
 }
 
