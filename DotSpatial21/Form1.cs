@@ -611,17 +611,18 @@ namespace DotSpatial21
                 string layerName = currentLayer.LegendText;
                 string layerType = currentLayer.GetType().Name;
                 bool layerVisible = currentLayer.IsVisible;
-
+                string layerProj = currentLayer.Projection.Name;
+                
                 // 在状态栏中显示当前图层信息
                 spatialStatusStrip1.Items["toolStripStatusLabelLayerName"].Text = "当前图层: " + layerName;
-                spatialStatusStrip1.Items["toolStripStatusLabelLayerType"].Text = "类型: " + layerType;
+                spatialStatusStrip1.Items["toolStripStatusLabelLayerProj"].Text = "坐标系统: " + layerProj;
                 spatialStatusStrip1.Items["toolStripStatusLabelLayerVisible"].Text = "可见性: " + (layerVisible ? "是" : "否");
             }
             else
             {
                 // 若当前图层对象为空，清空状态栏中的图层信息
                 spatialStatusStrip1.Items["toolStripStatusLabelLayerName"].Text = "";
-                spatialStatusStrip1.Items["toolStripStatusLabelLayerType"].Text = "";
+                spatialStatusStrip1.Items["toolStripStatusLabelLayerProj"].Text = "";
                 spatialStatusStrip1.Items["toolStripStatusLabelLayerVisible"].Text = "";
             }
         }

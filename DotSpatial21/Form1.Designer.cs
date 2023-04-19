@@ -53,7 +53,7 @@
             this.spatialDockManager1 = new DotSpatial.Controls.SpatialDockManager();
             this.spatialStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelLayerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelLayerType = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelLayerProj = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelLayerVisible = new System.Windows.Forms.ToolStripStatusLabel();
             this.坐标变换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单点投影ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,55 +107,55 @@
             this.面ToolStripMenuItem,
             this.文本转点ToolStripMenuItem});
             this.创建要素ToolStripMenuItem.Name = "创建要素ToolStripMenuItem";
-            this.创建要素ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.创建要素ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.创建要素ToolStripMenuItem.Text = "创建要素";
             // 
             // 点ToolStripMenuItem
             // 
             this.点ToolStripMenuItem.Name = "点ToolStripMenuItem";
-            this.点ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.点ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.点ToolStripMenuItem.Text = "点";
             this.点ToolStripMenuItem.Click += new System.EventHandler(this.点ToolStripMenuItem_Click);
             // 
             // 线ToolStripMenuItem
             // 
             this.线ToolStripMenuItem.Name = "线ToolStripMenuItem";
-            this.线ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.线ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.线ToolStripMenuItem.Text = "线";
             this.线ToolStripMenuItem.Click += new System.EventHandler(this.线ToolStripMenuItem_Click);
             // 
             // 面ToolStripMenuItem
             // 
             this.面ToolStripMenuItem.Name = "面ToolStripMenuItem";
-            this.面ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.面ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.面ToolStripMenuItem.Text = "面";
             this.面ToolStripMenuItem.Click += new System.EventHandler(this.面ToolStripMenuItem_Click);
             // 
             // 文本转点ToolStripMenuItem
             // 
             this.文本转点ToolStripMenuItem.Name = "文本转点ToolStripMenuItem";
-            this.文本转点ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.文本转点ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.文本转点ToolStripMenuItem.Text = "文本转点";
             this.文本转点ToolStripMenuItem.Click += new System.EventHandler(this.文本转点ToolStripMenuItem_Click);
             // 
             // 创建经纬网ToolStripMenuItem
             // 
             this.创建经纬网ToolStripMenuItem.Name = "创建经纬网ToolStripMenuItem";
-            this.创建经纬网ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.创建经纬网ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.创建经纬网ToolStripMenuItem.Text = "创建经纬网";
             this.创建经纬网ToolStripMenuItem.Click += new System.EventHandler(this.创建经纬网ToolStripMenuItem_Click);
             // 
             // 经纬网1ToolStripMenuItem
             // 
             this.经纬网1ToolStripMenuItem.Name = "经纬网1ToolStripMenuItem";
-            this.经纬网1ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.经纬网1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.经纬网1ToolStripMenuItem.Text = "经纬网1";
             this.经纬网1ToolStripMenuItem.Click += new System.EventHandler(this.经纬网1ToolStripMenuItem_Click);
             // 
             // 经纬网2ToolStripMenuItem
             // 
             this.经纬网2ToolStripMenuItem.Name = "经纬网2ToolStripMenuItem";
-            this.经纬网2ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.经纬网2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.经纬网2ToolStripMenuItem.Text = "经纬网2";
             this.经纬网2ToolStripMenuItem.Click += new System.EventHandler(this.经纬网2ToolStripMenuItem_Click);
             // 
@@ -171,14 +171,14 @@
             // 叠置分析ToolStripMenuItem
             // 
             this.叠置分析ToolStripMenuItem.Name = "叠置分析ToolStripMenuItem";
-            this.叠置分析ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.叠置分析ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.叠置分析ToolStripMenuItem.Text = "叠置分析";
             this.叠置分析ToolStripMenuItem.Click += new System.EventHandler(this.叠置分析ToolStripMenuItem_Click);
             // 
             // 缓冲区分析ToolStripMenuItem
             // 
             this.缓冲区分析ToolStripMenuItem.Name = "缓冲区分析ToolStripMenuItem";
-            this.缓冲区分析ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.缓冲区分析ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.缓冲区分析ToolStripMenuItem.Text = "缓冲区分析";
             this.缓冲区分析ToolStripMenuItem.Click += new System.EventHandler(this.缓冲区分析ToolStripMenuItem_Click);
             // 
@@ -193,7 +193,7 @@
             // kMLToolStripMenuItem
             // 
             this.kMLToolStripMenuItem.Name = "kMLToolStripMenuItem";
-            this.kMLToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.kMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kMLToolStripMenuItem.Text = "KML";
             this.kMLToolStripMenuItem.Click += new System.EventHandler(this.kMLToolStripMenuItem_Click);
             // 
@@ -261,7 +261,7 @@
             this.toolStripStatusLabelCoordinate,
             this.spatialStatusStrip,
             this.toolStripStatusLabelLayerName,
-            this.toolStripStatusLabelLayerType,
+            this.toolStripStatusLabelLayerProj,
             this.toolStripStatusLabelLayerVisible,
             this.toolStripStatuscopyright});
             this.spatialStatusStrip1.Location = new System.Drawing.Point(0, 428);
@@ -315,11 +315,11 @@
             this.toolStripStatusLabelLayerName.Size = new System.Drawing.Size(56, 17);
             this.toolStripStatusLabelLayerName.Text = "当前图层";
             // 
-            // toolStripStatusLabelLayerType
+            // toolStripStatusLabelLayerProj
             // 
-            this.toolStripStatusLabelLayerType.Name = "toolStripStatusLabelLayerType";
-            this.toolStripStatusLabelLayerType.Size = new System.Drawing.Size(32, 17);
-            this.toolStripStatusLabelLayerType.Text = "类型";
+            this.toolStripStatusLabelLayerProj.Name = "toolStripStatusLabelLayerProj";
+            this.toolStripStatusLabelLayerProj.Size = new System.Drawing.Size(56, 17);
+            this.toolStripStatusLabelLayerProj.Text = "坐标系统";
             // 
             // toolStripStatusLabelLayerVisible
             // 
@@ -402,7 +402,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatuscopyright;
         private System.Windows.Forms.ToolStripStatusLabel spatialStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerName;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerType;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerProj;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerVisible;
         private System.Windows.Forms.ToolStripMenuItem 坐标变换ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 单点投影ToolStripMenuItem;
