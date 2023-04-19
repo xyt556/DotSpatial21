@@ -57,6 +57,7 @@
             this.toolStripStatusLabelLayerVisible = new System.Windows.Forms.ToolStripStatusLabel();
             this.坐标变换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.单点投影ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.图层投影ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.spatialStatusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spatialDockManager1)).BeginInit();
@@ -329,7 +330,8 @@
             // 坐标变换ToolStripMenuItem
             // 
             this.坐标变换ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.单点投影ToolStripMenuItem});
+            this.单点投影ToolStripMenuItem,
+            this.图层投影ToolStripMenuItem});
             this.坐标变换ToolStripMenuItem.Name = "坐标变换ToolStripMenuItem";
             this.坐标变换ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.坐标变换ToolStripMenuItem.Text = "坐标变换";
@@ -340,6 +342,13 @@
             this.单点投影ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.单点投影ToolStripMenuItem.Text = "单点投影";
             this.单点投影ToolStripMenuItem.Click += new System.EventHandler(this.单点投影ToolStripMenuItem_Click);
+            // 
+            // 图层投影ToolStripMenuItem
+            // 
+            this.图层投影ToolStripMenuItem.Name = "图层投影ToolStripMenuItem";
+            this.图层投影ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.图层投影ToolStripMenuItem.Text = "图层投影";
+            this.图层投影ToolStripMenuItem.Click += new System.EventHandler(this.图层投影ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -397,6 +406,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelLayerVisible;
         private System.Windows.Forms.ToolStripMenuItem 坐标变换ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 单点投影ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 图层投影ToolStripMenuItem;
     }
 }
 

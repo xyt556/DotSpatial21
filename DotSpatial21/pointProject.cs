@@ -27,9 +27,7 @@ namespace DotSpatial21
             // 获取投影信息
             string sourceProjectionString = $"EPSG:{txtSource.Text.Trim()}"; // 原始坐标的投影信息，这里使用了WGS84经纬度坐标系
             string targetProjectionString = $"EPSG:{txtTarget.Text.Trim()}"; // 目标坐标的投影信息，这里使用了Web墨卡托投影
-
-            int epsgY;
-            int epsgT;
+                        
             ProjectionInfo sourceProjection;
             ProjectionInfo targetProjection;
             double[] sourceCoord = new double[] { x, y };

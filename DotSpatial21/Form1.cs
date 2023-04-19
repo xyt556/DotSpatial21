@@ -1,6 +1,7 @@
 ﻿using DotSpatial.Controls;
 using DotSpatial.Data;
 using DotSpatial.Projections;
+using DotSpatial.Projections.Forms;
 using DotSpatial.Symbology;
 //using DotSpatial.Topology;
 using GeoAPI.Geometries;
@@ -31,7 +32,7 @@ namespace DotSpatial21
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            
+
 
 
 
@@ -542,7 +543,7 @@ namespace DotSpatial21
             //openFileDialog.Title = "选择 KML 文件";
             //if (openFileDialog.ShowDialog() == DialogResult.OK)
             //{
-                
+
             //    if (openFileDialog.ShowDialog() == DialogResult.OK)
             //    {
             //        string fileName = openFileDialog.FileName;
@@ -564,7 +565,7 @@ namespace DotSpatial21
             //            MessageBox.Show("加载 KML 文件时发生错误：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //        }
             //    }
-            }
+        }
 
         private void map_MouseMove(object sender, MouseEventArgs e)
         {
@@ -581,7 +582,7 @@ namespace DotSpatial21
 
             // 以下是想动态显示比例尺，目前还有问题
             // 获取地图的当前视图范围
-            
+
 
             Extent currentExtent = map.ViewExtents;
 
@@ -629,6 +630,58 @@ namespace DotSpatial21
         {
             FrmpointProject myForm = new FrmpointProject();
             myForm.ShowDialog();
+        }
+
+        private void 图层投影ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 打开文件对话框以选择图层
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Shapefiles|*.shp";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // 打开图层
+                IFeatureSet featureSet = FeatureSet.Open(openFileDialog.FileName);
+
+                // 获取目标投影
+                ProjectionInfo destProjection = GetSelectedProjection();
+                if (destProjection != null)
+                {
+                    // 如果图层具有投影信息，则将其重新投影到目标投影
+                    if (featureSet.Projection != null)
+                    {
+                        featureSet.Reproject(destProjection);
+                        SaveLayer(featureSet);
+                    }
+                }
+            }
+        }
+
+        private ProjectionInfo GetSelectedProjection()
+        {
+            // 创建投影选择对话框
+            ProjectionSelectDialog projectionSelectDialog = new ProjectionSelectDialog();
+
+            // 显示对话框并获取用户选择的投影
+            if (projectionSelectDialog.ShowDialog() == DialogResult.OK)
+            {
+                return projectionSelectDialog.SelectedCoordinateSystem;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private void SaveLayer(IFeatureSet featureSet)
+        {
+            // 打开保存文件对话框以选择保存位置
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Shapefiles|*.shp";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // 保存图层
+                featureSet.SaveAs(saveFileDialog.FileName, true);
+            }
         }
     }
 }
